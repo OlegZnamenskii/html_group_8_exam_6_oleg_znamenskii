@@ -1,0 +1,42 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width,  initial-scale=1.0")
+        link(href='css/reset.css', rel='stylesheet')
+        link(href='vendor/slick/slick.css', rel='stylesheet')
+        link(href='vendor/slick/slick-theme.css', rel='stylesheet')
+        link(href='css/style.css', rel='stylesheet')
+        title CreateTitle
+    body
+        header
+            .container
+                nav.header.clearfix
+                    a(href="#").main-menu-logo Menu
+                    ul.main-menu
+                        li.main-menu__item
+                            a(href="#").main-menu__item--link Home
+                        li.main-menu__item
+                            a(href="#").main-menu__item--link About us
+                        li.main-menu__item
+                            a(href="#").main-menu__item--link careers
+                        li.main-menu__item
+                            a(href="#").main-menu__item--link Contact us
+                        li.main-menu__item
+                            a(href="#").main-menu__item--link company profile
+                        li.main-menu__item
+                            a(href="#").main-menu__item--link Company registration
+                        li.main-menu__item
+                            a(href="#").main-menu__item--link wish list
+                    a(href="#").button--toggle
+        .container
+            main.main
+                .sidebar
+                    block sidebar
+
+                main.content
+                    block content
+
+        script(src='vendor/jquery/jquery-3.1.1.min.js')
+        script(src='vendor/slick/slick.js')
+        script(src='js/main.js')

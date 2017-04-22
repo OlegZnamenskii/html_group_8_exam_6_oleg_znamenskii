@@ -1,0 +1,32 @@
+%no-list
+  padding: 0
+  margin: 0
+  list-style: none
+
+%display-flex
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+
+=linear-gradient($color1)
+  background-image: linear-gradient(to bottom, lighten($color1, 10%) 0%, darken($color1, 10%) 100%)
+
+=toggleable-button
+  &::before
+    content: "\2630"
+    color: #ffffff
+    position: absolute
+    right: 5%
+    top: 10%
+    cursor: pointer
+    font-size: 40px
+
+.btn
+  +linear-gradient(red)
+  color: #ffffff
+  border-radius: 3px
+  display: inline-block
+  padding: 10px 20px
+  text:
+    decoration: none
+    transform: uppercase
