@@ -1,17 +1,58 @@
+@import media
+@imoport mixins
+@import variables
+
 body
-  background: #eeeeee
+  background: $colorPrimary
   font-family: $fontFamilyPrimary
 a
   text-decoration: none
+
 .container
   min-width: 300px
-  max-width: 960px
+  max-width: 940px
   width: 100%
   margin: 0 auto
+
 .main
-  display: flex
-  .sidebar
-    flex-basis: 28%
+  @extend %no-list
+  @extend %display-flex
   .content
-    flex-basis: 72%
+    padding: 5px
+    width: 100%
+    margin-top: 2%
+    +min-width-768
+      width: 48%
+
+
+.features
+  background: $colorPrimary
+  padding-top: 4.7%
+  padding-bottom: 3.4%
+  .feature__icon
+    width: 75px
+    height: 75px
+    border-radius: 50%
+    color: $colorPrimary
+    background: $colorSecond
+    font-size: 40px
+    float: left
+    margin-top: 1%
+    margin-right: 3%
+    margin-left: 3%
+  .fa
+    @extend %pd
+  .feature__body
+    margin-left: 110px
+    .feature__title
+      color: $colorSecond
+      font-size: 20px
+      font-weight: 700
+      margin-top: 0
+    .feature__text
+      color: $colorThree
+      font-size: 16px
+      margin-top: 0
+      line-height: 1.5
+
 

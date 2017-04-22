@@ -2,41 +2,108 @@ doctype html
 html(lang="en")
     head
         meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width,  initial-scale=1.0")
+        meta(name='viewport", content="width=device-width,  initial-scale=1.0')
+        link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet')
+        link(href='css/font-awesome.min.css' rel='stylesheet')
         link(href='css/reset.css', rel='stylesheet')
         link(href='vendor/slick/slick.css', rel='stylesheet')
         link(href='vendor/slick/slick-theme.css', rel='stylesheet')
         link(href='css/style.css', rel='stylesheet')
-        title CreateTitle
+        title Oleg Znamenskii
     body
-        header
-            .container
-                nav.header.clearfix
-                    a(href="#").main-menu-logo Menu
+        header(id='header')
+            nav.header.clearfix(aria-role='navigation')
+                .container
+                    a(href="#").main-menu-logo
+                        img(src="./uploads/logo.png" alt="logo"  width="140" height='30')
                     ul.main-menu
                         li.main-menu__item
-                            a(href="#").main-menu__item--link Home
+                            a(href="#header").main-menu__item--link(data-scroll) Home
                         li.main-menu__item
-                            a(href="#").main-menu__item--link About us
+                            a(href="#services").main-menu__item--link(data-scroll) Services
                         li.main-menu__item
-                            a(href="#").main-menu__item--link careers
+                            a(href="#clients").main-menu__item--link(data-scroll) Clients
                         li.main-menu__item
-                            a(href="#").main-menu__item--link Contact us
+                            a(href="#team").main-menu__item--link(data-scroll) Team
                         li.main-menu__item
-                            a(href="#").main-menu__item--link company profile
-                        li.main-menu__item
-                            a(href="#").main-menu__item--link Company registration
-                        li.main-menu__item
-                            a(href="#").main-menu__item--link wish list
+                            a(href="#").main-menu__item--link(data-scroll) Contact
                     a(href="#").button--toggle
-        .container
-            main.main
-                .sidebar
-                    block sidebar
+            .slider
+              .slider__item
+                .slider__content
+                  .slider__caption
+                    .box--info.slider__text 
+                        p Can you build the website of my dreams? 
+                    .box--attention.slider__title 
+                        h2 Yup, we can do that.
+              .slider__item
+                .slider__content
+                  .slider__caption
+                    .box--info.slider__text 
+                        p Can you build the website of my dreams? 
+                    .box--attention.slider__title 
+                        h2 Yup, we can do that.
 
-                main.content
-                    block content
+        .features(id='services')
+            .container
+                main.main
+                    .content.clearfix
+                        .feature__icon
+                            i(class="fa fa-user" aria-hidden="true")
+                        .feature__body
+                            h4.feature__title Branding & Identity
+                            p.feature__text Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.
+                    .content.clearfix
+                        .feature__icon
+                            i(class="fa fa-window-maximize" aria-hidden="true")
+                        .feature__body
+                            h4.feature__title Web & Graphic Design
+                            p.feature__text Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.
+                    .content.clearfix
+                        .feature__icon
+                            i(class="fa fa-star" aria-hidden="true")
+                        .feature__body
+                            h4.feature__title Mobile App Development
+                            p.feature__text Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.
+                    .content.clearfix
+                        .feature__icon
+                            i(class="fa fa-video-camera" aria-hidden="true")
+                        .feature__body
+                            h4.feature__title Animations
+                            p.feature__text Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.
+                    .content.clearfix
+                        .feature__icon
+                            i(class="fa fa-star" aria-hidden="true")
+                        .feature__body
+                            h4.feature__title UI/UX
+                            p.feature__text Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.
+                    .content.clearfix
+                        .feature__icon
+                            i(class="fa fa-camera" aria-hidden="true")
+                        .feature__body
+                            h4.feature__title Photography
+                            p.feature__text Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.
+        .clients(id='clients')
+            .container
+                .clients-item
+                    .clients-title
+                        h2 Awesome
+                            span Clients
+                        p.descr See what nice things our clients said about us. 
+                    .client-quote
+                        img(src='../uploads/ava_1.jpg' alt='client-photo' width='225' height='225')
+                        p “ Proin iaculis purus consequat sem cure  digni ssim donec porttitora entum suscipit aenean rhoncus. ”
+                        a - Jamie Richardson, Founder of Cocoa Media
+                    .client-quote
+                        img(src='../uploads/ava_2.jpg' alt='client-photo' width='225' height='225')
+                        p “ Proin iaculis purus consequat sem cure  digni ssim donec porttitora entum suscipit aenean rhoncus. ”
+                        a - Bart Thompson, Founder of Rainel
 
+        .logos
+            .container
+        .team(id="team")
+            .container
         script(src='vendor/jquery/jquery-3.1.1.min.js')
-        script(src='vendor/slick/slick.js')
+        script(src='vendor/slick/slick.min.js')
+        script(src='vendor/smooth-scroll/smooth-scroll.min.js')
         script(src='js/main.js')

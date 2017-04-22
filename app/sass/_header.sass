@@ -1,40 +1,45 @@
+@import media
+@import mixins
+@import variables
 header
-  background: #000000
+
 .header
-  position: relative
+  position: absolute
+  box-sizing: border-box
+  width: 100%
   z-index: 999
-  padding: 29px 34px 23px 28px
-  
+  padding: 3% 3% 3% 5%
+
 .main-menu-logo
   float: none
   display: block
   font-size: 25px
   color: #ffffff
   +min-width-768
-    display: none
-
+    float: left
+    margin-right: 35%
 .main-menu
   display: none
   &.is-open
     display: block
   &.is-closed
     display: none
-  background: inherit
-  float: none
+    background: inherit
+    float: none
   @extend %no-list
 
   +min-width-768
     display: block
     &.is-closed
       display: block
-    position: relative
-    width: inherit
-    background: none
+      position: relative
+      width: inherit
+      background: none
 
   &__item
     text-align: center
     &:hover
-      background: rgba(42, 108, 120, 1)
+      background: rgba(158, 158, 158, 1)
     &--link
       font-size: 17px
       color: #ffffff

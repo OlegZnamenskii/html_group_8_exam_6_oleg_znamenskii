@@ -1,9 +1,46 @@
+.main,
 .main-menu
 {
     margin: 0;
     padding: 0;
 
     list-style: none;
+}
+
+.features .fa
+{
+    padding: 17px;
+}
+
+.clients-title
+{
+    font-size: 54px;
+
+    text-align: center;
+
+    color: #222;
+}
+
+.clients-title .descr
+{
+    font-size: 18px;
+
+    color: #777;
+}
+
+.main,
+.clietns-item
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: row;
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .btn
@@ -20,11 +57,13 @@
     background-image: linear-gradient(to bottom, #f33 0%, #c00 100%);
 }
 
-body
+@imoport mixins
+{
+}body
 {
     font-family: 'Open Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
 
-    background: #eee;
+    background: #fff;
 }
 
 a
@@ -36,40 +75,142 @@ a
 {
     width: 100%;
     min-width: 300px;
-    max-width: 960px;
+    max-width: 940px;
     margin: 0 auto;
-}
-
-.main
-{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-.main .sidebar
-{
-    -ms-flex-preferred-size: 28%;
-    flex-basis: 28%;
 }
 
 .main .content
 {
-    -ms-flex-preferred-size: 72%;
-    flex-basis: 72%;
+    width: 100%;
+    margin-top: 2%;
+    padding: 5px;
 }
 
-header
+@media screen and (min-width: 768px)
 {
-    background: #000;
+    .main .content
+    {
+        width: 48%;
+    }
+}
+
+.features
+{
+    padding-top: 4.7%;
+    padding-bottom: 3.4%;
+
+    background: #fff;
+}
+
+.features .feature__icon
+{
+    font-size: 40px;
+
+    float: left;
+
+    width: 75px;
+    height: 75px;
+    margin-top: 1%;
+    margin-right: 3%;
+    margin-left: 3%;
+
+    color: #fff;
+    border-radius: 50%;
+    background: #222;
+}
+
+.features .feature__body
+{
+    margin-left: 110px;
+}
+
+.features .feature__body .feature__title
+{
+    font-size: 20px;
+    font-weight: 700;
+
+    margin-top: 0;
+
+    color: #222;
+}
+
+.features .feature__body .feature__text
+{
+    font-size: 16px;
+    line-height: 1.5;
+
+    margin-top: 0;
+
+    color: #777;
+}
+
+.main,
+.main-menu
+{
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.features .fa
+{
+    padding: 17px;
+}
+
+.clients-title
+{
+    font-size: 54px;
+
+    text-align: center;
+
+    color: #222;
+}
+
+.clients-title .descr
+{
+    font-size: 18px;
+
+    color: #777;
+}
+
+.main,
+.clietns-item
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: row;
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+.btn
+{
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: #fff;
+    border-radius: 3px;
+    background-image: linear-gradient(to bottom, #f33 0%, #c00 100%);
 }
 
 .header
 {
-    position: relative;
+    position: absolute;
     z-index: 999;
 
-    padding: 29px 34px 23px 28px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 3% 3% 3% 5%;
 }
 
 .main-menu-logo
@@ -86,16 +227,15 @@ header
 {
     .main-menu-logo
     {
-        display: none;
+        float: left;
+
+        margin-right: 35%;
     }
 }
 
 .main-menu
 {
     display: none;
-    float: none;
-
-    background: inherit;
 }
 
 .main-menu.is-open
@@ -106,11 +246,18 @@ header
 .main-menu.is-closed
 {
     display: none;
+    float: none;
+
+    background: inherit;
 }
 
 @media screen and (min-width: 768px)
 {
     .main-menu
+    {
+        display: block;
+    }
+    .main-menu.is-closed
     {
         position: relative;
 
@@ -119,10 +266,6 @@ header
         width: inherit;
 
         background: none;
-    }
-    .main-menu.is-closed
-    {
-        display: block;
     }
 }
 
@@ -133,7 +276,7 @@ header
 
 .main-menu__item:hover
 {
-    background: #2a6c78;
+    background: #9e9e9e;
 }
 
 .main-menu__item--link
@@ -204,76 +347,124 @@ header
     }
 }
 
-.slider-block
-{
-    background: url('../img/slider-bg.jpg') center center no-repeat;
-}
-
-.slick-slide
+.slider
 {
     position: relative;
 
-    padding: 40px 0 85px;
+    background-size: cover;
 }
 
-.slick-slide img
+.slider__item
 {
-    float: right;
-
-    width: 47%;
-}
-
-.slick-prev::before
-{
-    display: block;
-
-    width: 58px;
-    height: 58px;
-
-    content: '';
-
-    background: url('../img/slider-arrows-srpite.svg') 0 center no-repeat;
-    background-size: 116px;
-}
-
-.slick-next::before
-{
-    display: block;
-
-    width: 58px;
-    height: 58px;
-
-    content: '';
-
-    background: url('../img/slider-arrows-srpite.svg') -57px center no-repeat;
-    background-size: 116px;
-}
-
-.slider-info
-{
-    position: absolute;
-    top: 20%;
-    left: 16%;
-
-    width: 36%;
-}
-
-.slider-info__title
-{
-    font-family: 'Roboto', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-    font-size: 52px;
-    font-weight: 300;
-    line-height: 50px;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 86px;
 
     color: #fff;
+    background: url(../img/slider-image-1.jpg) center center no-repeat;
 }
 
-.slider-info__subtitle
+.slider__caption
+{
+    margin: 0 0 5% 25%;
+    padding-top: 15%;
+}
+
+.slider__caption
+{
+    max-width: 570px;
+}
+
+.slider__title
+{
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+
+    text-transform: uppercase;
+}
+
+.slider__text
 {
     font-size: 16px;
-    font-weight: 300;
+    line-height: 1.5em;
+}
 
-    padding-top: 30px;
+.main,
+.main-menu
+{
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.features .fa
+{
+    padding: 17px;
+}
+
+.clients-title
+{
+    font-size: 54px;
+
+    text-align: center;
+
+    color: #222;
+}
+
+.clients-title .descr
+{
+    font-size: 18px;
+
+    color: #777;
+}
+
+.main,
+.clietns-item
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: row;
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+.btn
+{
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    text-decoration: none;
+    text-transform: uppercase;
 
     color: #fff;
+    border-radius: 3px;
+    background-image: linear-gradient(to bottom, #f33 0%, #c00 100%);
+}
+
+.clients
+{
+    background: #fafafa;
+}
+
+.clients-title .client-quote img
+{
+    display: inline-block;
+
+    width: 100%;
+    height: auto;
+}
+
+.logos
+{
+    display: block;
+
+    background: #fff;
 }

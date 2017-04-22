@@ -22,8 +22,22 @@ $(document).ready(function () {
     $('.slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        dots: true,
-        autoplay: false
+        dots: false,
+        autoplay: false,
+        arrows: false,
         // autoplaySpeed: 1000
     });
 });
+
+//плавная прокрутка
+
+$(document).ready(function(){
+    $("#menu").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 900);
+    });
+});
+
+smoothScroll.init();
