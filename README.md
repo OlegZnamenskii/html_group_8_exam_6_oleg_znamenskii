@@ -1,1 +1,1 @@
-# html_group_8_exam_6_oleg_znamenskii
+-[чек уан ту](https://olegznamenskii.github.io/html_group_8_exam_6_oleg_znamenskii/)
