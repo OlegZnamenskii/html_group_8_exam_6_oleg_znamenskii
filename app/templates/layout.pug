@@ -92,12 +92,12 @@ html(lang="en")
                         p.descr See what nice things our clients said about us. 
                     .client-quote
                         img(src='../uploads/ava_1.jpg' alt='client-photo' width='225' height='225')
-                        .quote
+                        .quote.tri-left
                             p “ Proin iaculis purus consequat sem cure  digni ssim donec porttitora entum suscipit aenean rhoncus. ”
                             a(href='#') - Jamie Richardson, Founder of Cocoa Media
                     .client-quote
                         img(class='order2' src='../uploads/ava_2.jpg' alt='client-photo' width='225' height='225')
-                        .quote(class='order1')
+                        .quote.tri-right.order1
                             p “ Proin iaculis purus consequat sem cure  digni ssim donec porttitora entum suscipit aenean rhoncus. ”
                             a(href='#') - Bart Thompson, Founder of Rainel
 
@@ -111,7 +111,21 @@ html(lang="en")
                     h2  Amazing
                             span  Team
                     p.descr These wonderful people make work enjoyable.
-                
+                .team-photo
+                    .photo
+                        img(class='border' src='../uploads/ava_3.jpg' alt='photo' width='262' height='262')
+                        h5 Kimberly Thompson
+                        p Marketer
+                    .photo
+                        img(class='border' src='../uploads/ava_4.jpg' alt='photo' width='262' height='262')
+                        h5 Rico Massimo
+                        p Coder
+                    .photo
+                        img(class='border' src='../uploads/ava_5.jpg' alt='photo' width='262' height='262')
+                        h5 Uku Mason
+                        p Graphic Designer
+
+
         script(src='vendor/jquery/jquery-3.1.1.min.js')
         script(src='vendor/slick/slick.min.js')
         script(src='vendor/smooth-scroll/smooth-scroll.min.js')

@@ -27,11 +27,30 @@
 			+min-width-768
 				margin-right: 5%
 		.quote
-			padding: 6% 1%
+			padding: 6% 13% 6% 13%
 			display: inline-block
 			background: $colorPrimary
+
+.team-photo
+	display: flex
+	flex-wrap: wrap
+	+min-width-768
+		flex-wrap: nowrap
+		justify-content: space-around
+
+	.photo
+		text-align: center
+		
+.border
+	@extend %border
 
 .order1
 	@extend %order1
 .order2
 	@extend %order2
+
+.tri-left
+	&::after 
+
+.tri-right
+	&::before 

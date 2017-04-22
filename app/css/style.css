@@ -48,7 +48,8 @@
         flex-wrap: wrap;
 }
 
-.clients .client-quote img
+.clients .client-quote img,
+.border
 {
     border: 5px solid #fff;
     border-radius: 50%;
@@ -221,7 +222,8 @@ a
         flex-wrap: wrap;
 }
 
-.clients .client-quote img
+.clients .client-quote img,
+.border
 {
     border: 5px solid #fff;
     border-radius: 50%;
@@ -494,7 +496,8 @@ a
         flex-wrap: wrap;
 }
 
-.clients .client-quote img
+.clients .client-quote img,
+.border
 {
     border: 5px solid #fff;
     border-radius: 50%;
@@ -579,9 +582,35 @@ a
 {
     display: inline-block;
 
-    padding: 6% 1%;
+    padding: 6% 13% 6% 13%;
 
     background: #fff;
+}
+
+.team-photo
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+@media screen and (min-width: 768px)
+{
+    .team-photo
+    {
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+}
+
+.team-photo .photo
+{
+    text-align: center;
 }
 
 .logos
@@ -641,7 +670,8 @@ a
         flex-wrap: wrap;
 }
 
-.clients .client-quote img
+.clients .client-quote img,
+.border
 {
     border: 5px solid #fff;
     border-radius: 50%;
