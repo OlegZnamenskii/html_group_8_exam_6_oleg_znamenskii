@@ -12,16 +12,20 @@
     padding: 17px;
 }
 
-.clients-title
+.clients .clients-title,
+.team .team-title
 {
     font-size: 54px;
+
+    padding-top: 9%;
 
     text-align: center;
 
     color: #222;
 }
 
-.clients-title .descr
+.clients .clients-title .descr,
+.team .team-title .descr
 {
     font-size: 18px;
 
@@ -29,7 +33,8 @@
 }
 
 .main,
-.clietns-item
+.clients .clietns-item,
+.team .team-item
 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -41,6 +46,28 @@
     -ms-flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+}
+
+.clients .client-quote img
+{
+    border: 5px solid #fff;
+    border-radius: 50%;
+}
+
+.order1
+{
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+}
+
+.order2
+{
+    margin-left: 5%;
+
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
 }
 
 .btn
@@ -158,16 +185,20 @@ a
     padding: 17px;
 }
 
-.clients-title
+.clients .clients-title,
+.team .team-title
 {
     font-size: 54px;
+
+    padding-top: 9%;
 
     text-align: center;
 
     color: #222;
 }
 
-.clients-title .descr
+.clients .clients-title .descr,
+.team .team-title .descr
 {
     font-size: 18px;
 
@@ -175,7 +206,8 @@ a
 }
 
 .main,
-.clietns-item
+.clients .clietns-item,
+.team .team-item
 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -187,6 +219,28 @@ a
     -ms-flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+}
+
+.clients .client-quote img
+{
+    border: 5px solid #fff;
+    border-radius: 50%;
+}
+
+.order1
+{
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+}
+
+.order2
+{
+    margin-left: 5%;
+
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
 }
 
 .btn
@@ -404,16 +458,20 @@ a
     padding: 17px;
 }
 
-.clients-title
+.clients .clients-title,
+.team .team-title
 {
     font-size: 54px;
+
+    padding-top: 9%;
 
     text-align: center;
 
     color: #222;
 }
 
-.clients-title .descr
+.clients .clients-title .descr,
+.team .team-title .descr
 {
     font-size: 18px;
 
@@ -421,7 +479,8 @@ a
 }
 
 .main,
-.clietns-item
+.clients .clietns-item,
+.team .team-item
 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -433,6 +492,28 @@ a
     -ms-flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+}
+
+.clients .client-quote img
+{
+    border: 5px solid #fff;
+    border-radius: 50%;
+}
+
+.order1
+{
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+}
+
+.order2
+{
+    margin-left: 5%;
+
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
 }
 
 .btn
@@ -454,12 +535,53 @@ a
     background: #fafafa;
 }
 
-.clients-title .client-quote img
+.clients .client-quote
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+@media screen and (min-width: 768px)
+{
+    .clients .client-quote
+    {
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+}
+
+.clients .client-quote img
+{
+    display: inline-block;
+}
+
+@media screen and (min-width: 768px)
+{
+    .clients .client-quote img
+    {
+        margin-right: 5%;
+    }
+}
+
+.clients .client-quote .quote
 {
     display: inline-block;
 
-    width: 100%;
-    height: auto;
+    padding: 6% 1%;
+
+    background: #fff;
 }
 
 .logos
@@ -467,4 +589,101 @@ a
     display: block;
 
     background: #fff;
+}
+
+.main,
+.main-menu
+{
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.features .fa
+{
+    padding: 17px;
+}
+
+.clients .clients-title,
+.team .team-title
+{
+    font-size: 54px;
+
+    padding-top: 9%;
+
+    text-align: center;
+
+    color: #222;
+}
+
+.clients .clients-title .descr,
+.team .team-title .descr
+{
+    font-size: 18px;
+
+    color: #777;
+}
+
+.main,
+.clients .clietns-item,
+.team .team-item
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: row;
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+.clients .client-quote img
+{
+    border: 5px solid #fff;
+    border-radius: 50%;
+}
+
+.order1
+{
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+}
+
+.order2
+{
+    margin-left: 5%;
+
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+}
+
+.btn
+{
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: #fff;
+    border-radius: 3px;
+    background-image: linear-gradient(to bottom, #f33 0%, #c00 100%);
+}
+
+.team
+{
+    color: #fff;
+    background: #111;
+}
+
+.team .team-title
+{
+    color: #fff;
 }

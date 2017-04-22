@@ -12,6 +12,7 @@
   text-align: center
   font-size: 54px
   color: $colorSecond
+  padding-top: 9%
 
 %descr
   font-size: 18px
@@ -21,6 +22,20 @@
   display: flex
   flex-direction: row
   flex-wrap: wrap
+
+%flex-100
+  flex: 1 100%
+
+%border
+  border-radius: 50%
+  border: 5px solid #fff
+
+%order1
+  order: 1
+%order2
+  order: 2
+  margin-left: 5%
+
 
 =linear-gradient($color1)
   background-image: linear-gradient(to bottom, lighten($color1, 10%) 0%, darken($color1, 10%) 100%)

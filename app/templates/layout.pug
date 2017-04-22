@@ -61,7 +61,7 @@ html(lang="en")
                             p.feature__text Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.
                     .content.clearfix
                         .feature__icon
-                            i(class="fa fa-star" aria-hidden="true")
+                            i(class="fa fa-tablet" aria-hidden="true")
                         .feature__body
                             h4.feature__title Mobile App Development
                             p.feature__text Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.
@@ -87,22 +87,31 @@ html(lang="en")
             .container
                 .clients-item
                     .clients-title
-                        h2 Awesome
-                            span Clients
+                        h2  Awesome
+                            span  Clients
                         p.descr See what nice things our clients said about us. 
                     .client-quote
                         img(src='../uploads/ava_1.jpg' alt='client-photo' width='225' height='225')
-                        p “ Proin iaculis purus consequat sem cure  digni ssim donec porttitora entum suscipit aenean rhoncus. ”
-                        a - Jamie Richardson, Founder of Cocoa Media
+                        .quote
+                            p “ Proin iaculis purus consequat sem cure  digni ssim donec porttitora entum suscipit aenean rhoncus. ”
+                            a(href='#') - Jamie Richardson, Founder of Cocoa Media
                     .client-quote
-                        img(src='../uploads/ava_2.jpg' alt='client-photo' width='225' height='225')
-                        p “ Proin iaculis purus consequat sem cure  digni ssim donec porttitora entum suscipit aenean rhoncus. ”
-                        a - Bart Thompson, Founder of Rainel
+                        img(class='order2' src='../uploads/ava_2.jpg' alt='client-photo' width='225' height='225')
+                        .quote(class='order1')
+                            p “ Proin iaculis purus consequat sem cure  digni ssim donec porttitora entum suscipit aenean rhoncus. ”
+                            a(href='#') - Bart Thompson, Founder of Rainel
 
         .logos
             .container
+                .logos-wrap
+                    a(href='#')
         .team(id="team")
             .container
+                .team-title
+                    h2  Amazing
+                            span  Team
+                    p.descr These wonderful people make work enjoyable.
+                
         script(src='vendor/jquery/jquery-3.1.1.min.js')
         script(src='vendor/slick/slick.min.js')
         script(src='vendor/smooth-scroll/smooth-scroll.min.js')

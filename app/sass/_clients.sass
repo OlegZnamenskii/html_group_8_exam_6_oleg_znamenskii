@@ -5,14 +5,33 @@
 
 .clients
 	background: #fafafa
-.clietns-item
-	@extend %display-flex
-.clients-title
-	@extend %title
-	.descr
-		@extend %descr
+	.clietns-item
+		@extend %display-flex
+	.clients-title
+		@extend %title
+
+		.descr
+			@extend %descr
+
 	.client-quote
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		+min-width-768
+			justify-content: space-around
+			flex-wrap: nowrap
+			align-items: center
 		img
+			@extend %border
 			display: inline-block
-			width: 100%
-			height: auto
+			+min-width-768
+				margin-right: 5%
+		.quote
+			padding: 6% 1%
+			display: inline-block
+			background: $colorPrimary
+
+.order1
+	@extend %order1
+.order2
+	@extend %order2

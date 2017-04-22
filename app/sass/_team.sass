@@ -1,0 +1,14 @@
+@import media
+@import mixins
+@import variables
+
+.team
+	background: #111111
+	color: $colorPrimary
+	.team-item
+		@extend %display-flex
+	.team-title
+		@extend %title
+		color: $colorPrimary
+		.descr
+			@extend %descr
